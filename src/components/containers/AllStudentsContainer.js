@@ -12,7 +12,9 @@ class AllStudentsContainer extends Component {
 
   render(){
     return(
-      <AllStudentsView allStudents={this.props.allStudents}/>
+      <AllStudentsView 
+        allStudents={this.props.allStudents}
+      />
     );
   }
 }

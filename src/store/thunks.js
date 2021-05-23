@@ -40,6 +40,16 @@ export const fetchAllStudentsThunk = () => async (dispatch) => {
   }
 };
 
+//Single student
+export const fetchStudentThunk = id => async dispatch => {
+  try {
+    let res = await axios.get(`/api/students/${id}`);
+    dispatch(ac.fetchStudent(res.data));
+  } catch(err) {
+    console.error(err);
+  }
+};
+
 export const addStudentThunk = (student) => async (dispatch) => {
   try {
     let res = await axios.post(`/api/students`, student);
@@ -63,16 +73,6 @@ export const editStudentThunk = student => async dispatch => {
   try {
     let updatedStudent = await axios.put(`/api/students/${student.id}`, student);
     dispatch(ac.editStudent(updatedStudent));
-  } catch(err) {
-    console.error(err);
-  }
-};
-
-//Single student
-export const fetchStudentThunk = id => async dispatch => {
-  try {
-    let res = await axios.get(`/api/students/${id}`);
-    dispatch(ac.fetchStudent(res.data));
   } catch(err) {
     console.error(err);
   }
