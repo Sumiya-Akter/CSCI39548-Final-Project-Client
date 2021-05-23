@@ -12,22 +12,22 @@ Frontend (React-Redux, React, and React Router)
 - [x] Write a component to display a list of all students (just their names)
 - [x] Display the all-campuses component when the url matches `/campuses`
 - [x] Display the all-students component when the url matches `/students`
-- [] Add links to the navbar that can be used to navigate to the all-campuses view and the all-students view
+- [x] Add links to the navbar that can be used to navigate to the all-campuses view and the all-students view
 
 Single Student and Single Campus 
 
 Frontend (React and React Router)
-- [ ] Write a component to display a single campus with the following information:
-  - [ ] The campus's name, image, address and description
-  - [ ] A list of the names of all students in that campus (or a helpful message if it doesn't have any students)
-- [ ] Display the appropriate campus's info when the url matches `/campuses/:campusId`
-- [ ] Clicking on a campus from the all-campuses view should navigate to show that campus in the single-campus view
+- [x] Write a component to display a single campus with the following information:
+  - [x] The campus's name, image, address and description
+  - [x] A list of the names of all students in that campus (or a helpful message if it doesn't have any students)
+- [x] Display the appropriate campus's info when the url matches `/campuses/:campusId`
+- [x] Clicking on a campus from the all-campuses view should navigate to show that campus in the single-campus view
 
 - [ ] Write a component to display a single student with the following information:
   - [ ] The student's full name, email, image, and gpa
   - [ ] The name of their campus (or a helpful message if they don't have one)
-- [ ] Display the appropriate student when the url matches `/students/:studentId`
-- [ ] Clicking on a student from the all-students view should navigate to show that student in the single-student view
+- [x] Display the appropriate student when the url matches `/students/:studentId`
+- [x] Clicking on a student from the all-students view should navigate to show that student in the single-student view
 
 - [ ] Clicking on the name of a student in the single-campus view should navigate to show that student in the single-student view
 - [ ] Clicking on the name of a campus in the single-student view should navigate to show that campus in the single-campus view

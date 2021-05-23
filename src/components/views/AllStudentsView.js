@@ -11,13 +11,13 @@ const AllStudentsView = (props) => {
         <div>
             <div className="navigationBar" style={{flexGrow: '1'}}>
                 <AppBar position="static" elevation={0} style={{backgroundColor: '#11153e', shadows:'none'}}>
-                    <Toolbar>
+                    <Toolbar style={{display:'flex',justifyContent:'space-between'}}>
                         <Link to={'/'} style={{textDecoration: 'none'}} >
                             <Typography variant="h6" style={{textAlign:'left', fontType: 'bold', fontFamily: 'Courier, sans-serif', fontSize: '35px', color:"#CDDC39"}}>
                                 CRUD App
                             </Typography>
                         </Link>
-                        <div className="navButtons" style={{marginRight: '10px'}}>
+                        <div className="navButtons">
                             <Link to={'/campuses'} style={{textDecoration: 'none'}} >
                                 <Button variant="contained" color="primary" style={{marginRight: '10px'}}>
                                     All Campuses
