@@ -6,11 +6,9 @@ const AllStudentsView = (props) => {
         <div>
             {props.allStudents.map((student) => (
                 <div key={student.id}>
-                    <Link to={`/students/${student.id}`}>
+                    <Link to={`/student/${student.id}`}>
                         <h1>{student.firstname} {student.lastname}</h1>
                     </Link>
-                    <p>{student.email}</p>
-                    <p>{student.gpa}</p>
                 </div>
             ))}
         </div>
