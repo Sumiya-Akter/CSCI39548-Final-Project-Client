@@ -1,3 +1,4 @@
+
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -33,9 +34,12 @@ return (
       </AppBar>
     </div>
     <h1>{student.firstname} {student.lastname}</h1>
-    <img src={student.imageUrl} alt="student' image" width="150" height="150" />
+    <img src={student.imageUrl} alt="student's image" width="150" height="150" />
     <p>Email: {student.email}</p>
-    <p>GPA: {student.gpa}</p>   
+    <p>GPA: {student.gpa}</p>  
+    <Link to={`/campus/${student.campusId}`}>
+            <p>Campus ID {student.campusId}</p>
+    </Link>
   </div>
   );
 };

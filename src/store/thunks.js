@@ -39,7 +39,6 @@ export const addCampusThunk = (campus) => async (dispatch) => {
     console.error(err);
   }
 };
-
 //delete campus thunk
 export const deleteCampusThunk = (campusId) => async (dispatch) => {
   try {

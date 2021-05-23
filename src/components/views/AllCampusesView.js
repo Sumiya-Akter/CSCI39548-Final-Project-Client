@@ -10,6 +10,19 @@ import Button from '@material-ui/core/Button';
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { TextField } from '@material-ui/core';
+import axios from 'axios';
+
+const deleteCampus = async (id) => {
+  await axios
+    .delete(`/api/campuses/${id}`)
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  window.location.replace(`/campuses`);
+};
 
 import axios from 'axios';
 

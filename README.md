@@ -24,12 +24,12 @@ Frontend (React and React Router)
 - [x] Clicking on a campus from the all-campuses view should navigate to show that campus in the single-campus view
 
 - [ ] Write a component to display a single student with the following information:
-  - [ ] The student's full name, email, image, and gpa
-  - [ ] The name of their campus (or a helpful message if they don't have one)
+  - [x] The student's full name, email, image, and gpa
+  - [x] The name of their campus (or a helpful message if they don't have one)
 - [x] Display the appropriate student when the url matches `/students/:studentId`
 - [x] Clicking on a student from the all-students view should navigate to show that student in the single-student view
 
-- [ ] Clicking on the name of a student in the single-campus view should navigate to show that student in the single-student view
+- [x] Clicking on the name of a student in the single-campus view should navigate to show that student in the single-student view
 - [ ] Clicking on the name of a campus in the single-student view should navigate to show that campus in the single-campus view
 
 Adding a Campus and Adding a Student 
@@ -50,12 +50,12 @@ Frontend (React and React Router)
 Removing a Campus and Removing a Student
 
 Frontend (React and Axios/Fetch)
-- [ ] In the all-campuses view, include an `X` button next to each campus
-- [ ] Clicking the `X` button should:
-  - [ ] Make an AJAX request that causes that campus to be removed from database
-  - [ ] Remove the campus from the list of campuses without needing to refresh the page
+- [x] In the all-campuses view, include an `X` button next to each campus
+- [x] Clicking the `X` button should:
+  - [x] Make an AJAX request that causes that campus to be removed from database
+  - [x] Remove the campus from the list of campuses without needing to refresh the page
 
-- [ ] In the all-students view, include an `X` button next to each student
-- [ ] Clicking the `X` button should:
-  - [ ] Make an AJAX request that causes that student to be removed from database
-  - [ ] Remove the student from the list of students without needing to refresh the page
+- [x] In the all-students view, include an `X` button next to each student
+- [x] Clicking the `X` button should:
+  - [x] ] Make an AJAX request that causes that student to be removed from database
+  - [x] Remove the student from the list of students without needing to refresh the page
