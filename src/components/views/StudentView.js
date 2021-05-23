@@ -9,7 +9,9 @@ const StudentsView = (props) => {
       <img src={student.imageUrl} alt="student's image" width="150" height="150" />
       <p>Email: {student.email}</p>
       <p>GPA: {student.gpa}</p>  
-      <p>{student.campusId}</p>
+      <Link to={`/campus/${student.campusId}`}>
+            <p>Campus ID {student.campusId}</p>
+      </Link>
     </div>
     );
 };
