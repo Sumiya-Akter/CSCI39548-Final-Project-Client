@@ -24,20 +24,6 @@ const deleteCampus = async (id) => {
   window.location.replace(`/campuses`);
 };
 
-import axios from 'axios';
-
-const deleteCampus = async (id) => {
-  await axios
-    .delete(`/api/campuses/${id}`)
-    .then((response) => {
-      console.log(response);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-  window.location.replace(`/campuses`);
-};
-
 class AllCampusesView extends Component {
   constructor(props){
     super(props);
