@@ -1,17 +1,14 @@
-
+import { Link } from "react-router-dom";
 
 const CampusView = (props) => {
   const {campus} = props;
-  //waiting for students array to be populated
-  // if (campus.students === undefined){
-  //   return <div>Loading...</div>
-  // }
+  
   return (
     <div>      
       <h1>{campus.name}</h1>
-      <img src={campus.imageUrl} width="150" height="150" />
-      <p>{campus.address}</p>
-      <p>{campus.description}</p>
+      <img src={campus.imageUrl} alt="campuses' image" width="150" height="150" />
+      <p>Address: {campus.address}</p>
+      <p>Description: {campus.description}</p>
 
       <h2>Students on campus</h2>
       <ul>
@@ -19,8 +16,10 @@ const CampusView = (props) => {
         let name = student.firstname + " " + student.lastname;
         return (
           <li key={student.id}>
-            <img src={student.imageUrl} width="150" height="150" />
-            <p>{name}</p>
+            <Link to={`/student/${student.id}`}>
+                <p>{name}</p>
+            </Link>
+            <img src={student.imageUrl} alt="student's image" width="150" height="150" />
             </li>
         );
       })}
