@@ -5,6 +5,20 @@ import Button from '@material-ui/core/Button';
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
 
+import axios from "axios";
+
+const onDelete = async (id) => {
+    await axios
+        .delete(`/api/students/${id}`)
+        .then((response) => {
+            console.log(response);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+    window.location.replace(`/students`);
+};
+
 const AllStudentsView = (props) => {
     // const classes = useStyles();
     return(
@@ -32,10 +46,10 @@ const AllStudentsView = (props) => {
                     </Toolbar>
                 </AppBar>
             </div>
-                
             <div>
                 {props.allStudents.map((student) => (
                     <div key={student.id}>
+                        <button onClick={() => onDelete(student.id)}>Delete Student</button>
                         <Link to={`/student/${student.id}`}>
                             <h1>{student.firstname} {student.lastname}</h1>
                         </Link>
