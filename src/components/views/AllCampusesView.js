@@ -3,7 +3,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
+//import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -11,6 +11,19 @@ import Button from '@material-ui/core/Button';
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { TextField } from '@material-ui/core';
+import axios from 'axios';
+
+const deleteCampus = async (id) => {
+  await axios
+    .delete(`/api/campuses/${id}`)
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  window.location.replace(`/campuses`);
+};
 
 class AllCampusesView extends Component {
   constructor(props){
@@ -98,6 +111,9 @@ class AllCampusesView extends Component {
               <h1>{campus.name}</h1>
               <img src={campus.imageUrl} alt="campuses' image" width="150" height="150" />
             </Link>
+            <button onClick={() => deleteCampus(campus.id)}>
+              Delete Campus
+            </button>
           </div>
         ))}
         <Button variant="contained" color="primary" onClick={this.startAdd}>
