@@ -30,11 +30,31 @@ export const fetchCampusThunk = (id) => async (dispatch) => {
   }
 };
 
+//delete campus thunk
+export const deleteCampusThunk = (campusId) => async (dispatch) => {
+  try {
+    await axios.delete(`/api/campuses/${campusId}`);
+    dispatch(ac.deleteCampus(campusId));
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 //All students
 export const fetchAllStudentsThunk = () => async (dispatch) => {
   try {
     let res = await axios.get(`/api/students`);
     dispatch(ac.fetchAllStudents(res.data));
+  } catch(err) {
+    console.error(err);
+  }
+};
+
+//Single student
+export const fetchStudentThunk = id => async dispatch => {
+  try {
+    let res = await axios.get(`/api/students/${id}`);
+    dispatch(ac.fetchStudent(res.data));
   } catch(err) {
     console.error(err);
   }
@@ -63,16 +83,6 @@ export const editStudentThunk = student => async dispatch => {
   try {
     let updatedStudent = await axios.put(`/api/students/${student.id}`, student);
     dispatch(ac.editStudent(updatedStudent));
-  } catch(err) {
-    console.error(err);
-  }
-};
-
-//Single student
-export const fetchStudentThunk = id => async dispatch => {
-  try {
-    let res = await axios.get(`/api/students/${id}`);
-    dispatch(ac.fetchStudent(res.data));
   } catch(err) {
     console.error(err);
   }
