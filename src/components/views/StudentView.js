@@ -37,9 +37,13 @@ return (
     <img src={student.imageUrl} alt="student's image" width="150" height="150" />
     <p>Email: {student.email}</p>
     <p>GPA: {student.gpa}</p>  
-    <Link to={`/campus/${student.campusId}`}>
-            <p>Campus ID {student.campusId}</p>
-    </Link>
+    <div className="studentCampus">
+      <h2>Campus</h2>
+      <Link to={`/campus/${student.campusId}`}>
+        {student.campus.name}
+      </Link>
+    </div>
+    
   </div>
   );
 };
