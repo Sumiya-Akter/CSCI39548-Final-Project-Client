@@ -40,7 +40,7 @@ return (
     <div className="studentCampus">
       <h2>Campus</h2>
       <Link to={`/campus/${student.campusId}`}>
-        {student.campus.name}
+        {student.campusId}
       </Link>
     </div>
     
