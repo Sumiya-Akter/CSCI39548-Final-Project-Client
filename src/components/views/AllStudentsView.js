@@ -76,22 +76,17 @@ class AllStudentsView extends Component {
         else if(this.state.cAddress==="") this.setState({registerError: "Please enter the campus' address"})
         else {
             console.log("Adding Student: ", this.state.sFirstName, this.state.sLastName, this.state.sEmail, this.state.sGPA, this.state.sImg)
+            if (this.state.sImg === "") {
+                this.setState({sImg: "https://img.icons8.com/small/452/error.png"})
+            }
             event.preventDefault();
             let data = {
                 firstname: this.state.sFirstName, 
                 lastname: this.state.sLastName, 
                 email: this.state.sEmail, 
                 gpa: this.state.sGPA, 
+                imageUrl: this.state.sImg
             }
-      if(this.state.sImg!="") {
-        let data = {
-            firstname: this.state.sFirstName, 
-            lastname: this.state.sLastName, 
-            email: this.state.sEmail, 
-            gpa: this.state.sGPA, 
-            imageUrl: this.state.sImg
-        };
-      }
       await axios
         .post(`/api/students/`, data)
         .then((response) => {
@@ -100,7 +95,7 @@ class AllStudentsView extends Component {
         .catch((err) => {
           console.log(err);
         });
-        window.location.replace(`/students/`);
+        // window.location.replace(`/students/`);
       this.setState({addingStudent: false})
       }
     }

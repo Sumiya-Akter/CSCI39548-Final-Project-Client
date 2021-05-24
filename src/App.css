@@ -39,6 +39,7 @@
 .csItem {
   min-width: 20%!important;
   padding-left: 20px;
+  text-align: center;
 }
 
 .csName {
