@@ -59,7 +59,13 @@ const HomePageView = () => {
         </Toolbar>
       </AppBar>
       
-      <div className={classes.greeting}><h1>Home Page</h1></div>
+      <div className="homeTitle" style={{marginLeft: '20px'}}>
+        <h1 style={{fontFamily: 'Courier, sans-serif'}}>Welcome to the Campus and Student Directory App</h1>
+        <p>Please select either <b>All Campuses</b> or <b>All Students</b> in the top-right navigation bar to get started</p>
+      </div>
+      <div className="homeFooter" style={{ marginLeft: '20px', position: 'absolute', bottom: '0', fontSize: '12px'}}>
+        <p>Project by <a href="https://github.com/Jhe0031" style={{textDecoration: 'none'}}>Jia Qi He</a>, <a href="https://github.com/Sumiya-Akter" style={{textDecoration: 'none'}}>Sumiya Akter</a>, and <a href="https://github.com/lilyworld" style={{textDecoration: 'none'}}>Li Gao</a> for the 2021 Spring Web Development course at Hunter College</p>
+      </div>
     </div>
   );    
 }
