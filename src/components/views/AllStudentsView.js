@@ -34,7 +34,8 @@ class AllStudentsView extends Component {
             sLastName: "",
             sEmail: "",
             sGPA: 0.0,
-            sImg: "https://ualr.edu/elearning/files/2020/10/No-Photo-Available.jpg"
+            sImg: "https://ualr.edu/elearning/files/2020/10/No-Photo-Available.jpg",
+            registerError: ""
         }
     }
 
@@ -72,8 +73,9 @@ class AllStudentsView extends Component {
     }
 
     addStudent = async(event) => {
-        if(this.state.cName==="") this.setState({registerError: "Please enter the campus name"})
-        else if(this.state.cAddress==="") this.setState({registerError: "Please enter the campus' address"})
+        if(this.state.sFirstName==="") this.setState({registerError: "Please enter the student's name"})
+        if(this.state.sLastName==="") this.setState({registerError: "Please enter the student's name"})
+        else if(this.state.sEmail==="") this.setState({registerError: "Please enter the student's email"})
         else {
             console.log("Adding Student: ", this.state.sFirstName, this.state.sLastName, this.state.sEmail, this.state.sGPA, this.state.sImg)
             event.preventDefault();
@@ -201,6 +203,9 @@ class AllStudentsView extends Component {
                             fullWidth
                             onChange={this.changeSImg}
                             />
+                            <div style={{color: 'red'}}>
+                                {this.state.registerError}
+                            </div>
                         </DialogContent>
                         <DialogActions>
                         <Button variant="contained" onClick={this.closeSAdd}>

@@ -62,7 +62,7 @@ class AllCampusesView extends Component {
       cImg: "https://ualr.edu/elearning/files/2020/10/No-Photo-Available.jpg",
       cAddress: "",
       cDescription: "",
-      cDetails: []
+      registerError: ""
     })
     console.log("Starting Add")
   }
@@ -199,6 +199,9 @@ class AllCampusesView extends Component {
                   fullWidth
                   onChange={this.changeCDescription}
                 />
+                <div style={{color: 'red'}}>
+                  {this.state.registerError}
+                </div>
               </DialogContent>
             <DialogActions>
               <Button variant="contained" onClick={this.closeAdd}>
