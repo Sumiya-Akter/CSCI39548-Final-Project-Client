@@ -6,3 +6,50 @@
 .App-link {
   color: #61dafb;
 }
+
+.addButton {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+}
+
+.csHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-right: 23px;
+}
+
+.csList {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  flex-wrap: wrap;
+  /* padding-left: 50px; */
+}
+
+.csTitle {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  min-width: 200px;
+}
+
+.csItem {
+  min-width: 20%!important;
+  padding-left: 20px;
+}
+
+.csName {
+  text-decoration: none!important;
+}
+
+.deleteButton {
+  width: 25px!important;
+  min-width: 25px!important;
+}
+
+.csPage {
+  display: flex;
+}

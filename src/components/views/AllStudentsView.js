@@ -131,19 +131,30 @@ class AllStudentsView extends Component {
                         </Toolbar>
                     </AppBar>
                 </div>
-                {this.props.allStudents.map((student) => (
-                    <div className="studentList" key={student.id}>
-                        <Link to={`/student/${student.id}`}>
-                            <h1>{student.firstname} {student.lastname}</h1>
-                        </Link>
-                        <Button onClick={() => onDelete(student.id)}>
-                            X
-                        </Button>
-                    </div>
-                ))}
-                <Button variant="contained" color="primary" onClick={this.startSAdd}>
-                    Add Student
-                </Button>
+                <div className="csHeader">
+                    <h1 style={{marginLeft: '20px', fontFamily: 'Courier, sans-serif'}}>All Students</h1>
+                    <Button variant="contained" color="primary" onClick={this.startSAdd}>
+                        Add Student
+                    </Button>
+                </div>
+                <div className="csList">
+                    {this.props.allStudents.map((student) => (
+                        <div className="studentList csItem" key={student.id}>
+                            <div className="csTitle">
+                                <Link className="csName" to={`/student/${student.id}`}>
+                                    <h2>{student.firstname} {student.lastname}</h2>
+                                </Link>
+                                <Button className="deleteButton" variant="contained" style={{height:'25px', marginLeft: '10px'}} onClick={() => onDelete(student.id)}>
+                                    X
+                                </Button>
+                            </div>
+                            <Link to={'/student/${student.id}'}>
+                                <img src={student.imageUrl} alt="students' image" width="150" height="150" />
+                            </Link>
+                        </div>
+                    ))}
+                </div>
+                
                 <div className="AddStudentComponent">
                     <Dialog
                         fullWidth
