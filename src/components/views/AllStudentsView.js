@@ -34,7 +34,7 @@ class AllStudentsView extends Component {
             sLastName: "",
             sEmail: "",
             sGPA: 0.0,
-            sImg: ""
+            sImg: "https://ualr.edu/elearning/files/2020/10/No-Photo-Available.jpg"
         }
     }
 
@@ -61,7 +61,7 @@ class AllStudentsView extends Component {
             sLastName: "",
             sEmail: "",
             sGPA: null,
-            sImg: ""
+            sImg: "https://ualr.edu/elearning/files/2020/10/No-Photo-Available.jpg"
         })
         console.log("Starting Add Student")
     }
@@ -95,8 +95,8 @@ class AllStudentsView extends Component {
         .catch((err) => {
           console.log(err);
         });
-        // window.location.replace(`/students/`);
-      this.setState({addingStudent: false})
+        window.location.replace(`/students/`);
+        this.setState({addingStudent: false})
       }
     }
 
@@ -144,7 +144,7 @@ class AllStudentsView extends Component {
                                 </Button>
                             </div>
                             <Link to={'/student/${student.id}'}>
-                                <img src={student.imageUrl} alt="students' image" width="150" height="150" />
+                                <img src={student.imageUrl} alt="No photo provided" width="150" height="150" />
                             </Link>
                         </div>
                     ))}

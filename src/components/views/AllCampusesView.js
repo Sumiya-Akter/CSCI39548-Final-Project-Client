@@ -59,7 +59,7 @@ class AllCampusesView extends Component {
     this.setState({
       addingCampus: true,
       cName: "",
-      cImg: "",
+      cImg: "https://ualr.edu/elearning/files/2020/10/No-Photo-Available.jpg",
       cAddress: "",
       cDescription: "",
       cDetails: []
