@@ -130,20 +130,30 @@ class AllCampusesView extends Component {
             </Toolbar>
           </AppBar>
         </div>
-        {this.props.allCampuses.map((campus) => (
-          <div key={campus.id}>
-            <Link to={`/campus/${campus.id}`}>
-              <h1>{campus.name}</h1>
-              <img src={campus.imageUrl} alt="campuses' image" width="150" height="150" />
-            </Link>
-            <Button onClick={() => deleteCampus(campus.id)}>
-              X
-            </Button>
-          </div>
-        ))}
-        <Button variant="contained" color="primary" onClick={this.startAdd}>
-          Add Campus
-        </Button>
+        <div className="csHeader">
+          <h1 style={{marginLeft: '20px', fontFamily: 'Courier, sans-serif'}}>All Campuses</h1>
+          <Button className="addButton" variant="contained" color="primary" onClick={this.startAdd}>
+            Add Campus
+          </Button>
+        </div>
+        <div className="csList">
+          {this.props.allCampuses.map((campus) => (
+            <div key={campus.id} className="csItem">
+              <div className="csTitle">
+                <Link className="csName" to={`/campus/${campus.id}`}>
+                  <h2>{campus.name}</h2>
+                </Link>
+                <Button className="deleteButton" variant="contained" style={{height:'25px', marginLeft: '10px'}}onClick={() => deleteCampus(campus.id)}>
+                  X
+                </Button>
+              </div>
+              <Link to={'/campus/${campus.id}'}>
+                <img src={campus.imageUrl} alt="campuses' image" width="150" height="150" />
+              </Link>
+            </div>
+          ))}
+        </div>
+        
         <div className="AddCampusComponent">
           <Dialog
             fullWidth
