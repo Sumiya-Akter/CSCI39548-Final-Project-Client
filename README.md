@@ -23,14 +23,14 @@ Frontend (React and React Router)
 - [x] Display the appropriate campus's info when the url matches `/campuses/:campusId`
 - [x] Clicking on a campus from the all-campuses view should navigate to show that campus in the single-campus view
 
-- [ ] Write a component to display a single student with the following information:
+- [x] Write a component to display a single student with the following information:
   - [x] The student's full name, email, image, and gpa
   - [x] The name of their campus (or a helpful message if they don't have one)
 - [x] Display the appropriate student when the url matches `/students/:studentId`
 - [x] Clicking on a student from the all-students view should navigate to show that student in the single-student view
 
 - [x] Clicking on the name of a student in the single-campus view should navigate to show that student in the single-student view
-- [ ] Clicking on the name of a campus in the single-student view should navigate to show that campus in the single-campus view
+- [x] Clicking on the name of a campus in the single-student view should navigate to show that campus in the single-campus view
 
 Adding a Campus and Adding a Student 
 
@@ -41,8 +41,8 @@ Frontend (React and React Router)
   - [x] Make an AJAX request that causes the new campus to be persisted in the database
   - [x] Add the new campus to the list of campuses without needing to refresh the page
 
-- [ ] Write a component to display a form for adding a new student that contains inputs for _at least_ first name, last name and email
-- [ ] Display this component EITHER as part of the all-students view, or as its own view
+- [x] Write a component to display a form for adding a new student that contains inputs for _at least_ first name, last name and email
+- [x] Display this component EITHER as part of the all-students view, or as its own view
 - [ ] Submitting the form with a valid first name/last name/email should:
   - [ ] Make an AJAX request that causes the new student to be persisted in the database
   - [ ] Add the new student to the list of students without needing to refresh the page
