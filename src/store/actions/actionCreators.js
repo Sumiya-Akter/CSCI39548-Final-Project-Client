@@ -34,6 +34,13 @@ export const deleteCampus = (campusId) => {
   };
 };
 
+export const editCampus = (campus) => {
+  return {
+    type: at.EDIT_CAMPUS,
+    payload: campus,
+  };
+};
+
 //All students
 export const fetchAllStudents = (students) => {
   return {

@@ -147,7 +147,7 @@ class AllCampusesView extends Component {
                   X
                 </Button>
               </div>
-              <Link to={'/campus/${campus.id}'}>
+              <Link to={`/campus/${campus.id}`}>
                 <img src={campus.imageUrl} alt="campuses' image" width="150" height="150" />
               </Link>
             </div>

@@ -76,9 +76,6 @@ class AllStudentsView extends Component {
         else if(this.state.cAddress==="") this.setState({registerError: "Please enter the campus' address"})
         else {
             console.log("Adding Student: ", this.state.sFirstName, this.state.sLastName, this.state.sEmail, this.state.sGPA, this.state.sImg)
-            if (this.state.sImg === "") {
-                this.setState({sImg: "https://img.icons8.com/small/452/error.png"})
-            }
             event.preventDefault();
             let data = {
                 firstname: this.state.sFirstName, 
@@ -143,7 +140,7 @@ class AllStudentsView extends Component {
                                     X
                                 </Button>
                             </div>
-                            <Link to={'/student/${student.id}'}>
+                            <Link to={`/student/${student.id}`}>
                                 <img src={student.imageUrl} alt="No photo provided" width="150" height="150" />
                             </Link>
                         </div>

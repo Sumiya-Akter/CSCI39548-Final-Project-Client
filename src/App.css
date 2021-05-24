@@ -1,16 +1,20 @@
 .App {
-  background-color: #fcb6bb;
+  background-color:	#fbf7f5;
   min-height: 100vh;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #000000;
 }
 
 .addButton {
   display: flex;
   justify-content: center;
   height: 40px;
+}
+
+.csBody {
+  margin-left: 23px;
 }
 
 .csHeader {
@@ -44,6 +48,7 @@
 
 .csName {
   text-decoration: none!important;
+  color: black!important;
 }
 
 .deleteButton {

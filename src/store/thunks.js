@@ -39,6 +39,7 @@ export const addCampusThunk = (campus) => async (dispatch) => {
     console.error(err);
   }
 };
+
 //delete campus thunk
 export const deleteCampusThunk = (campusId) => async (dispatch) => {
   try {
@@ -46,6 +47,16 @@ export const deleteCampusThunk = (campusId) => async (dispatch) => {
     dispatch(ac.deleteCampus(campusId));
   } catch (err) {
     console.log(err);
+  }
+};
+
+//edit campus thunk
+export const editCampusThunk = campus => async dispatch => {
+  try {
+    let updatedCampus = await axios.put(`/api/campuses/${campus}`, campus);
+    dispatch(ac.editCampus(updatedCampus));
+  } catch(err) {
+    console.error(err);
   }
 };
 
